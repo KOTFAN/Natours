@@ -35,4 +35,45 @@ body {
    background-position: top;
 
    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+   position: relative;
+}
+
+
+
+
+.header-image {
+   position: absolute;
+   top: 45px;
+   left: 45px;
+
+}
+
+.logo {
+   height: 30px;
+}
+
+.header-box {
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.header-main-h {
+   display: block;
+   color: #fff;
+   text-transform: uppercase;
+   font-weight: 400;
+   letter-spacing: 35px;
+   font-size: 60px;
+}
+
+.header-subh {
+   color: #fff;
+   text-transform: uppercase;
+   letter-spacing: 17.5px;
+   font-size: 20px;
+   font-weight: 700;
+   display: block;
 }
