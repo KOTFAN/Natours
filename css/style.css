@@ -93,7 +93,9 @@ body {
 
 
 
-.header-btn {}
+.header-btn {
+   display: inline-block;
+}
 
 
 .header-btn:hover {
@@ -110,7 +112,7 @@ body {
 
 .header-btn:visited,
 .header-btn:link {
-   display: inline-block;
+
    text-decoration: none;
    text-transform: uppercase;
    border-radius: 100px;
