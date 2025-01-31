@@ -70,7 +70,7 @@ body {
    font-size: 60px;
    animation-name: moveRight;
    animation-duration: 1s;
-   animation-delay: 1s;
+   animation-delay: 0.5s;
    animation-iteration-count: 1s;
    animation-timing-function: ease-out;
 }
@@ -84,7 +84,7 @@ body {
    display: block;
    animation-name: moveLeft;
    animation-duration: 1s;
-   animation-delay: 1s;
+   animation-delay: 0.5s;
    animation-iteration-count: 1s;
    animation-timing-function: ease-out;
    margin-bottom: 60px;
@@ -95,6 +95,7 @@ body {
 
 .header-btn {
    display: inline-block;
+   position: relative;
 }
 
 
@@ -120,6 +121,8 @@ body {
    transition: all .2s;
 
 
+
+
 }
 
 
@@ -130,6 +133,24 @@ body {
 }
 
 
+.header-btn::after {
+   content: "";
+   height: 100%;
+   width: 100%;
+   background-color: #fff;
+   z-index: -1;
+   transition: all .3s;
+   position: absolute;
+   top: 0;
+   left: 0;
+   border-radius: 100px;
+}
+
+
+.header-btn:hover::after {
+   transform: scaleX(1.4) scaleY(1.6);
+   opacity: 0;
+}
 
 
 
@@ -171,4 +192,28 @@ body {
    100% {
       transform: translateX(0px);
    }
+}
+
+
+
+
+
+
+@keyframes moveBtnUp {
+   0% {
+      transform: translateY(35px);
+      opacity: 0;
+   }
+
+
+   100% {
+      transform: translateX(0px);
+   }
+}
+
+
+.animated-bnt {
+   animation: moveBtnUp 0.5s ease-out 0.75s;
+   animation-fill-mode: backwards;
+
 }
