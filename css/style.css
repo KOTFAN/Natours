@@ -9,20 +9,40 @@ Dark green: #28b485
 
 /* ========================every to zero============================ */
 
-* {
+*,
+*::after,
+*::before {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
+   box-sizing: inherit;
+}
+
+
+
+
+/* ==================================================== */
+
+
+
+
+
+html {
+   /*this make 10px in %, for good zoom*/
+   font-size: 62.5%;
 }
 
 
 body {
    font-family: "Lato", sans-serif;
    font-weight: 400;
-   font-size: 16px;
+
+
+
+
    line-height: 1.7;
    color: #777;
-   padding: 30px;
+   padding: 3rem;
+   box-sizing: border-box;
 }
 
 
@@ -44,13 +64,13 @@ body {
 
 .header-image {
    position: absolute;
-   top: 45px;
-   left: 45px;
+   top: 4.5rem;
+   left: 4.5rem;
 
 }
 
 .logo {
-   height: 30px;
+   height: 3rem;
 }
 
 .header-box {
@@ -66,20 +86,22 @@ body {
    color: #fff;
    text-transform: uppercase;
    font-weight: 400;
-   letter-spacing: 35px;
-   font-size: 60px;
+   letter-spacing: 3.5rem;
+   font-size: 6rem;
    animation-name: moveRight;
    animation-duration: 1s;
    animation-delay: 0.5s;
    animation-iteration-count: 1s;
    animation-timing-function: ease-out;
+
+   animation-fill-mode: backwards;
 }
 
 .header-subh {
    color: #fff;
    text-transform: uppercase;
-   letter-spacing: 17.5px;
-   font-size: 20px;
+   letter-spacing: 1.75rem;
+   font-size: 2rem;
    font-weight: 700;
    display: block;
    animation-name: moveLeft;
@@ -87,7 +109,9 @@ body {
    animation-delay: 0.5s;
    animation-iteration-count: 1s;
    animation-timing-function: ease-out;
-   margin-bottom: 60px;
+   margin-bottom: 6rem;
+
+   animation-fill-mode: backwards;
 
 }
 
@@ -96,18 +120,19 @@ body {
 .header-btn {
    display: inline-block;
    position: relative;
+   font-size: 1.6rem;
 }
 
 
 .header-btn:hover {
-   transform: translateY(-3px);
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   transform: translateY(-0.3rem);
+   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 
 .header-btn:active {
    transform: translateY(-1px);
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 
@@ -116,8 +141,8 @@ body {
 
    text-decoration: none;
    text-transform: uppercase;
-   border-radius: 100px;
-   padding: 15px 40px;
+   border-radius: 10rem;
+   padding: 1.5rem 4rem;
    transition: all .2s;
 
 
@@ -143,7 +168,7 @@ body {
    position: absolute;
    top: 0;
    left: 0;
-   border-radius: 100px;
+   border-radius: 10rem;
 }
 
 
@@ -163,12 +188,12 @@ body {
 
 @keyframes moveRight {
    0% {
-      transform: translateX(-100px);
+      transform: translateX(-10rem);
       opacity: 0;
    }
 
    80% {
-      transform: translateX(10px);
+      transform: translateX(1rem);
       opacity: 100%;
    }
 
@@ -180,12 +205,12 @@ body {
 
 @keyframes moveLeft {
    0% {
-      transform: translateX(100px);
+      transform: translateX(10rem);
       opacity: 0;
    }
 
    80% {
-      transform: translateX(-10px);
+      transform: translateX(-1rem);
       opacity: 100%;
    }
 
@@ -201,7 +226,7 @@ body {
 
 @keyframes moveBtnUp {
    0% {
-      transform: translateY(35px);
+      transform: translateY(3.5rem);
       opacity: 0;
    }
 
