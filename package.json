@@ -1,14 +1,14 @@
 {
-  "name": "natours",
-  "version": "1.0.0",
-  "description": "Landing page for natours progect",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "KOTFAN",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^9.0.0"
-  }
+   "name": "natours",
+   "version": "1.0.0",
+   "description": "Landing page for natours progect",
+   "main": "index.js",
+   "scripts": {
+      "compile:sass": "node-sass sass/main.scss css/style.css -w"
+   },
+   "author": "KOTFAN",
+   "license": "ISC",
+   "devDependencies": {
+      "node-sass": "^9.0.0"
+   }
 }

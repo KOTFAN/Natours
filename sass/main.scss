@@ -1,0 +1,245 @@
+//mixins for colors
+
+$main-color: #7ed56f;
+$main-color-light: #55c57a;
+$main-color-dark: #28b485;
+
+$color-grey: #777;
+$color-white: #ffffff;
+
+/* ========================every to zero============================ */
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+
+
+
+/* ==================================================== */
+
+
+
+
+
+html {
+   /*this make 10px in %, for good zoom*/
+   font-size: 62.5%;
+}
+
+
+body {
+   font-family: "Lato", sans-serif;
+   font-weight: 400;
+
+
+
+
+   line-height: 1.7;
+   color: $color-grey;
+   padding: 2rem;
+   box-sizing: border-box;
+}
+
+
+/* ==================================================== */
+
+.header {
+   height: 95vh;
+   background-image: linear-gradient(to right bottom, rgba($main-color, 0.8), rgba($main-color-dark, 0.8)), url(../img/hero.jpg);
+   background-size: cover;
+   background-position: top;
+
+   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+   position: relative;
+
+}
+
+
+
+
+.header__image {
+   position: absolute;
+   top: 3.5rem;
+   left: 3.5rem;
+   cursor: pointer;
+
+}
+
+.header__logo {
+   height: 3rem;
+}
+
+.header__box {
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.header__main-h {
+   display: block;
+   color: $color-white;
+   text-transform: uppercase;
+   font-weight: 400;
+   letter-spacing: 3.5rem;
+   font-size: 6rem;
+   animation-name: moveRight;
+   animation-duration: 1s;
+   animation-delay: 0.5s;
+   animation-iteration-count: 1s;
+   animation-timing-function: ease-out;
+
+   animation-fill-mode: backwards;
+}
+
+.header__subh {
+   color: $color-white;
+   text-transform: uppercase;
+   letter-spacing: 1.75rem;
+   font-size: 2rem;
+   font-weight: 700;
+   display: block;
+   animation-name: moveLeft;
+   animation-duration: 1s;
+   animation-delay: 0.5s;
+   animation-iteration-count: 1s;
+   animation-timing-function: ease-out;
+   margin-bottom: 6rem;
+
+   animation-fill-mode: backwards;
+
+}
+
+
+
+.header__btn {
+   display: inline-block;
+   position: relative;
+   font-size: 1.6rem;
+}
+
+
+.header__btn:hover {
+   transform: translateY(-0.3rem);
+   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+
+.header__btn:active {
+   transform: translateY(-1px);
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+.header__btn:visited,
+.header__btn:link {
+
+   text-decoration: none;
+   text-transform: uppercase;
+   border-radius: 10rem;
+   padding: 1.5rem 4rem;
+   transition: all .2s;
+
+
+
+
+}
+
+
+
+.btn--white {
+   color: $color-grey;
+   background-color: $color-white;
+
+}
+
+
+.header__btn::after {
+   content: "";
+   height: 100%;
+   width: 100%;
+   background-color: $color-white;
+   z-index: -1;
+   transition: all .3s;
+   position: absolute;
+   top: 0;
+   left: 0;
+   border-radius: 10rem;
+}
+
+
+.header__btn:hover::after {
+   transform: scaleX(1.4) scaleY(1.6);
+   opacity: 0;
+}
+
+
+
+
+.bnt--animated {
+   animation: moveBtnUp 0.5s ease-out 0.75s;
+   animation-fill-mode: backwards;
+
+}
+
+
+
+
+
+/* ==============================Animations============================= */
+
+@keyframes moveRight {
+   0% {
+      transform: translateX(-10rem);
+      opacity: 0;
+   }
+
+   80% {
+      transform: translateX(1rem);
+      opacity: 100%;
+   }
+
+   100% {
+      transform: translateX(0px);
+   }
+}
+
+
+@keyframes moveLeft {
+   0% {
+      transform: translateX(10rem);
+      opacity: 0;
+   }
+
+   80% {
+      transform: translateX(-1rem);
+      opacity: 100%;
+   }
+
+   100% {
+      transform: translateX(0px);
+   }
+}
+
+
+
+
+
+
+@keyframes moveBtnUp {
+   0% {
+      transform: translateY(3.5rem);
+      opacity: 0;
+   }
+
+
+   100% {
+      transform: translateX(0px);
+   }
+}
