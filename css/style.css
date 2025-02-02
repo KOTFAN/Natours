@@ -6,20 +6,49 @@
   padding: 0;
   box-sizing: inherit; }
 
-/* ==================================================== */
 html {
   /*this make 10px in %, for good zoom*/
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box; }
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(1rem);
+    opacity: 100%; }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem);
+    opacity: 100%; }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes moveBtnUp {
+  0% {
+    transform: translateY(3.5rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+
+/* ========================every what about text style============================ */
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 2rem;
-  box-sizing: border-box; }
+  padding: 2rem; }
 
-/* ==================================================== */
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -105,31 +134,3 @@ body {
 .btn--animated {
   animation: moveBtnUp 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
-
-/* ==============================Animations============================= */
-@keyframes moveRight {
-  0% {
-    transform: translateX(-10rem);
-    opacity: 0; }
-  80% {
-    transform: translateX(1rem);
-    opacity: 100%; }
-  100% {
-    transform: translateX(0px); } }
-
-@keyframes moveLeft {
-  0% {
-    transform: translateX(10rem);
-    opacity: 0; }
-  80% {
-    transform: translateX(-1rem);
-    opacity: 100%; }
-  100% {
-    transform: translateX(0px); } }
-
-@keyframes moveBtnUp {
-  0% {
-    transform: translateY(3.5rem);
-    opacity: 0; }
-  100% {
-    transform: translateX(0px); } }

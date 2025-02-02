@@ -1,0 +1,21 @@
+/* ========================every to zero============================ */
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+
+html {
+   /*this make 10px in %, for good zoom*/
+   font-size: 62.5%;
+}
+
+
+body {
+
+   box-sizing: border-box;
+}
