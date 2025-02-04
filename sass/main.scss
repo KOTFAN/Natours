@@ -1,4 +1,5 @@
 // for compilation scss to css in terminal write "npm run compile:scss"
+// to run life server in terminal write "life-server"
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
@@ -10,3 +11,6 @@
 
 @import "layout/header";
 @import "components/buttonWhite";
+
+
+@import "pages/home";

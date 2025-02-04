@@ -1,0 +1,28 @@
+.about {
+   background-color: $color-grey-1;
+   margin-top: -20vh;
+   padding: 25rem 0;
+
+
+
+
+   // .about__main
+
+   &__main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5rem;
+   }
+
+   // .about__text
+
+   &__text {
+      background-color: #fff;
+   }
+
+   // .about__images
+
+   &__images {
+      background-color: $color-grey-1;
+   }
+}
