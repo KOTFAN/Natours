@@ -1,0 +1,44 @@
+.btn {
+   &--white {
+      color: $color-grey;
+      background-color: $color-white;
+
+   }
+
+   &--animated {
+      animation: moveBtnUp 0.5s ease-out 0.75s;
+      animation-fill-mode: backwards;
+   }
+}
+
+
+
+
+.btn-text {
+
+   &:link,
+   &:visited {
+      font-size: $default-font-size;
+      color: $main-color-light;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid $main-color-light;
+      padding: 0.3rem;
+      transition: all .3s;
+      padding: 0.3rem 0.5rem;
+      font-size: 1.8rem;
+   }
+
+   &:hover {
+      background-color: $main-color-light;
+      color: $color-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+      transform: translateY(-2px);
+
+   }
+
+   &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+      transform: translateY(0);
+   }
+}
