@@ -1,0 +1,51 @@
+.box-faetures {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   column-gap: 4rem;
+
+
+
+
+
+
+   &__item {
+
+
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 2.5rem;
+      background-color: rgba($color-grey-1, .8);
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+      border-radius: 3px;
+      transition: all .3s;
+
+
+
+      &:hover {
+         transform: scale(1.05) translateY(-1.5rem);
+         box-shadow: 0 2.5rem 4rem rgba($color-black, .15);
+      }
+   }
+
+   // .box-faetures__icon
+
+   &__icon {
+      font-size: 6rem;
+      margin-bottom: .3rem;
+
+      display: inline-block;
+      background-image: linear-gradient(to right, $main-color-light, $main-color-dark);
+      color: transparent;
+      background-clip: text;
+
+
+   }
+
+   // .box-faetures__heading
+
+   &__heading {}
+
+   // .box-faetures__paragraph
+
+   &__paragraph {}
+}
