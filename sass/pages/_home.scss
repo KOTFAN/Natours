@@ -1,7 +1,7 @@
 .about {
    background-color: $color-grey-1;
    margin-top: -20vh;
-   padding: 25rem 0;
+   padding: 25rem 0rem;
 
 
 
@@ -10,7 +10,7 @@
 
    &__main {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 50% 50%;
       column-gap: 5rem;
    }
 
