@@ -44,3 +44,32 @@
 
    &__box {}
 }
+
+
+
+//cards section
+
+
+.tours {
+   padding: 25rem 0 50rem 0;
+   margin-top: -10rem;
+   display: block;
+
+   // .tours__header
+
+   &__header {}
+
+   // .tours__cards
+
+   &__cards {}
+
+
+   &__button {
+      text-align: center;
+      margin-top: 5rem;
+
+
+   }
+
+
+}

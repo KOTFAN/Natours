@@ -1,0 +1,199 @@
+.fliping-cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+   column-gap: 5rem;
+   height: 52rem;
+
+   // .fliping-cards__card
+
+   &__card {
+
+
+      position: relative;
+      height: 52rem;
+
+      //need for animation
+      perspective: 150rem;
+
+
+
+      &-side {
+         background-color: $color-white;
+
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+
+         transition: 0.8s all ease;
+         //need for animation
+         backface-visibility: hidden;
+         overflow: hidden;
+
+         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+         border-radius: .2rem;
+
+         &--front {
+
+            height: 100%;
+         }
+
+         // .fliping-cards__card-back
+
+         &--back {
+            height: 100%;
+            transform: rotateY(180deg);
+
+            &--1 {
+               background-image: linear-gradient(to right bottom, $second-color-yellow-light, $second-color-yellow-dark);
+            }
+
+            &--2 {
+               background-image: linear-gradient(to right bottom, $main-color-light, $main-color-dark);
+            }
+
+            &--3 {
+               background-image: linear-gradient(to right bottom, $second-color-blue-light, $second-color-blue-dark);
+            }
+         }
+
+      }
+
+      &:hover &-side--front {
+         transform: rotateY(-180deg);
+      }
+
+      &:hover &-side--back {
+         transform: rotateY(0);
+      }
+
+
+
+   }
+
+   &__card-image {
+
+      height: 23rem;
+      background-blend-mode: screen;
+      width: 100%;
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      scale: 1.02;
+
+
+      &--1 {
+         background-image:
+            linear-gradient(to right bottom, $second-color-yellow-light, $second-color-yellow-dark),
+            url(../img/nat-5.jpg);
+      }
+
+      &--2 {
+         background-image:
+            linear-gradient(to right bottom, $main-color-light, $main-color-dark),
+            url(../img/nat-6.jpg);
+      }
+
+      &--3 {
+         background-image:
+            linear-gradient(to right bottom, $second-color-blue-light, $second-color-blue-dark),
+            url(../img/nat-7.jpg);
+      }
+
+
+
+   }
+
+   &__card-heading {
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      color: $color-white;
+      font-weight: 300;
+      position: absolute;
+      top: 12rem;
+      right: 2rem;
+      text-align: right;
+      width: 75%;
+   }
+
+   &__card-heading-span {
+      padding: 1rem 1.5rem;
+      webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+
+
+      &--1 {
+         background-image:
+            linear-gradient(to right bottom,
+               rgba($second-color-yellow-light, .85),
+               rgba($second-color-yellow-dark, .85));
+      }
+
+      &--2 {
+         background-image:
+            linear-gradient(to right bottom,
+               rgba($main-color-dark, .85),
+               rgba($main-color-light, .85));
+      }
+
+      &--3 {
+         background-image:
+            linear-gradient(to right bottom,
+               rgba($second-color-blue-light, .85),
+               rgba($second-color-blue-dark, .85));
+      }
+   }
+
+   &__card-detalis {
+      padding: 3rem;
+
+      ul {
+         text-decoration: none;
+         list-style: none;
+         width: 80%;
+         margin: 0 auto;
+
+         li {
+
+            font-size: 1.5rem;
+            text-align: center;
+
+            padding: 1rem;
+
+            &:not(:last-child) {
+               border-bottom: 1px solid $color-grey-2;
+            }
+         }
+      }
+   }
+
+   &__card-back-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $color-white;
+      width: 90%;
+   }
+
+   &__card-back-only {
+      font-size: 1.4rem;
+
+      text-transform: uppercase;
+
+   }
+
+   &__card-back-price {
+      font-size: 6rem;
+      margin-bottom: 8rem;
+      font-weight: 100;
+   }
+
+   &__card-back-button {}
+
+
+
+
+}
