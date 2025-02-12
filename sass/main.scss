@@ -1,4 +1,4 @@
-// for compilation scss to css in terminal write "npm run compile:scss"
+// for compilation scss to css in terminal write "npm run compile:sass"
 // to run life server in terminal write "life-server"
 @import "abstracts/functions";
 @import "abstracts/mixins";
@@ -13,6 +13,7 @@
 
 
 @import "components/imagesComposition";
+@import "components/bg-video";
 @import "components/buttons";
 @import "components/box-faetures";
 @import "components/cards";
