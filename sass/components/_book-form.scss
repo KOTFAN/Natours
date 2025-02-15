@@ -1,0 +1,141 @@
+.book {
+
+   background-image: linear-gradient(105deg, rgba($color-white, .9) 50%, transparent 50%), url(../../img/nat-10.jpg); //cool i love this (solid colors gradient)
+   background-size: cover;
+   background-attachment: local; //fixed only 2 (img)
+
+   box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+   border-radius: 3px;
+
+   height: 50rem; //temp
+
+   // .book__form
+
+   &__form {
+      width: 50%;
+      padding: 6rem;
+   }
+
+   &__groop {
+      &:not(:last-child) {
+         margin-bottom: 3rem;
+      }
+   }
+
+
+
+   // .book__input
+
+   &__input {
+      display: block;
+      width: 90%;
+      font-size: 1.6rem;
+      padding: 1.5rem 2rem;
+      font-family: inherit;
+      color: inherit;
+      border-radius: 2px;
+      background-color: rgba($color-white, .5);
+      transition: all .3s;
+
+      border-bottom: 3px solid transparent;
+
+      &:focus {
+         outline: none;
+         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+         border-bottom: 3px solid $main-color;
+
+      }
+
+
+      &:focus:invalid {
+         border-bottom: 3px solid $second-color-yellow-dark;
+      }
+
+
+
+
+      &::-webkit-input-placeholder {
+         color: $color-grey-3; //style the placeholder
+      }
+
+
+
+
+
+
+   }
+
+
+
+
+   // .book__label
+
+   &__label {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: .7rem 0 0 2rem;
+      transition: all .3s;
+   }
+
+
+   &__input:placeholder-shown~&__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+   }
+
+
+
+
+   &__radio-groop {
+      width: 49%;
+      display: inline-block;
+   }
+
+
+   &__radio-selector {
+      display: none;
+   }
+
+   &__radio-label {
+      cursor: pointer;
+      font-size: $default-font-size;
+      position: relative;
+      padding-left: 4.5rem;
+
+
+   }
+
+
+   &__radio-button {
+      height: 3rem;
+      width: 3rem;
+      position: absolute;
+      left: 0;
+      top: -0.4rem;
+      display: inline-block;
+      border: .5rem solid $main-color;
+      border-radius: 50%;
+
+      &::after {
+         content: "";
+         display: block;
+         width: 1.3rem;
+         height: 1.3rem;
+         border-radius: 50%;
+         position: relative;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         background-color: $main-color;
+         opacity: 0;
+         transition: opacity .15s;
+      }
+   }
+
+
+   &__radio-selector:checked~&__radio-label &__radio-button::after {
+      opacity: 1;
+   }
+}
