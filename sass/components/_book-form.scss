@@ -18,7 +18,7 @@
 
    &__groop {
       &:not(:last-child) {
-         margin-bottom: 3rem;
+         margin-bottom: 1.5rem;
       }
    }
 
@@ -91,6 +91,7 @@
    &__radio-groop {
       width: 49%;
       display: inline-block;
+
    }
 
 
