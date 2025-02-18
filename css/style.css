@@ -16,6 +16,12 @@ body {
 input {
   border: none; }
 
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
 @keyframes moveRight {
   0% {
     transform: translateX(-10rem);
@@ -92,6 +98,76 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  width: 7rem;
+  height: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 1001;
+  cursor: pointer;
+  background-color: #ffffff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
+
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#55c57a, #28b485);
+  border-radius: 50%;
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation__nav {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1002;
+  opacity: 0;
+  transform: translate(-100%, -50%);
+  transition: all 0.8s cubic-bezier(0.69, -0.55, 0.26, 1.56); }
+
+.navigation__list {
+  text-align: center; }
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 1rem; }
+
+.navigation__link {
+  display: inline-block; }
+  .navigation__link:link, .navigation__link:visited {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 3.5rem;
+    transition: all .4s;
+    background-image: linear-gradient(120deg, transparent 50%, #f7f7f7 50%);
+    background-size: 220%;
+    transition: all .4s; }
+    .navigation__link:link:hover, .navigation__link:visited:hover {
+      color: #7ed56f;
+      transform: translateX(0.7rem);
+      background-position: 100%; }
+    .navigation__link:link span, .navigation__link:visited span {
+      font-weight: 700;
+      display: inline-block;
+      margin-right: 1.7rem; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100vw;
+  transform: translate(-50%, -50%); }
 
 .header {
   height: 95vh;

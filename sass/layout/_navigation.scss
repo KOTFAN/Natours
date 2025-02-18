@@ -1,0 +1,147 @@
+.navigation {
+
+   // .navigation__checkbox
+
+   &__checkbox {
+      display: none;
+   }
+
+   // .navigation__button
+
+   &__button {
+      width: 7rem;
+      height: 7rem;
+      position: fixed;
+      top: 6rem;
+      right: 6rem;
+      border-radius: 50%;
+      z-index: 1001;
+      cursor: pointer;
+      background-color: $color-white;
+      box-shadow: 0 1rem 3rem rgba($color-black, .1);
+
+   }
+
+   // .navigation__background
+
+   &__background {
+      width: 6rem;
+      height: 6rem;
+      position: fixed;
+      top: 6.5rem;
+      right: 6.5rem;
+      background-image: radial-gradient($main-color-light, $main-color-dark);
+      border-radius: 50%;
+
+      z-index: 1000;
+
+
+      transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+
+   }
+
+   // .navigation__nav
+
+   &__nav {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+
+      z-index: 1002;
+      opacity: 0;
+      transform: translate(-100%, -50%);
+      transition: all .8s cubic-bezier(0.69, -0.55, 0.26, 1.56);
+      // background-color: #5e1313;
+
+
+   }
+
+   // .navigation__list
+
+   &__list {
+      text-align: center;
+
+   }
+
+   // .navigation__item
+
+   &__item {
+
+
+      &:not(:last-child) {
+         margin-bottom: 1rem;
+      }
+
+
+
+
+
+
+
+
+   }
+
+   // .navigation__link
+
+   &__link {
+      display: inline-block;
+
+
+      &:link,
+      &:visited {
+
+         padding: 1rem 2rem;
+         text-transform: uppercase;
+         font-weight: 400;
+
+
+         color: $color-white;
+         font-size: 3.5rem;
+         transition: all .4s;
+
+
+         background-image: linear-gradient(120deg, transparent 50%, $color-grey-1 50%);
+         background-size: 220%;
+
+         transition: all .4s;
+
+         &:hover {
+            color: $main-color;
+            transform: translateX(.7rem);
+            background-position: 100%;
+         }
+
+
+
+
+
+
+         & span {
+            font-weight: 700;
+            display: inline-block;
+            margin-right: 1.7rem;
+         }
+
+      }
+
+
+
+
+
+
+   }
+
+   &__checkbox:checked~&__background {
+      transform: scale(80);
+
+
+   }
+
+
+   &__checkbox:checked~&__nav {
+      opacity: 1;
+      width: 100vw;
+      transform: translate(-50%, -50%);
+   }
+}
