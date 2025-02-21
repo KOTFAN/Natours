@@ -1,0 +1,110 @@
+.popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100%;
+   z-index: 9999;
+   background-color: rgba($color-black, .85);
+   opacity: 0;
+   visibility: hidden;
+   transition: all .3s;
+
+
+
+
+
+
+
+
+
+   // .popup__content
+
+   &__content {
+
+      width: 75%;
+      @include absCenter;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: 4rem;
+      height: 50rem;
+      box-shadow: 0 1rem 2rem rgba($color-grey, .5);
+
+      background-color: $color-grey-1;
+      opacity: 0;
+
+      transform: translate(-50%, -50%) scale(.1);
+      transition: all .4s .2s;
+   }
+
+   // .popup__images
+
+   &__images {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+   }
+
+   // .popup__img
+
+   &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   // .popup__info
+
+   &__info {
+      align-self: center;
+      padding: 1rem 2rem 2rem 0;
+
+   }
+
+   // .popup__heading
+
+   &__heading {}
+
+   // .popup__sub-heading
+
+   &__sub-heading {}
+
+   // .popup__text
+
+
+   &__text {
+      column-gap: 4rem;
+      column-rule: 1px solid $color-grey-3;
+      font-size: 1.4rem;
+      column-count: 2;
+      hyphens: auto; // words to other row with -
+   }
+
+
+
+
+   &:target {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   &:target &__content {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+   }
+
+
+   &__close {
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      line-height: 1;
+      color: $color-grey-4;
+      font-size: 3.5rem;
+
+      &:hover {
+         color: $main-color-light;
+      }
+
+   }
+}
