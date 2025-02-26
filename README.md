@@ -1,6 +1,6 @@
-Outdoors Landing Page
+Natours Landing Page
 
-Welcome to Outdoors – a beautifully designed landing page promoting outdoor activities and tours. The website features a clean, modern, and engaging design with a strong call to action for discovering tours.
+Welcome to Natours – a beautifully designed landing page promoting outdoor activities and tours. The website features a clean, modern, and engaging design with a strong call to action for discovering tours.
 
 🌿 Features
 
