@@ -1,31 +1,39 @@
 // for compilation scss to css in terminal write "npm run compile:sass"
 // to run life server in terminal write "life-server"
+
+//============variables and functions==============
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
-
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilites";
+//=============================
 
 
+//=============staff==================
+@import "base/base"; //reset css styles
+@import "base/animations"; //animations for page elements
+@import "base/typography"; //how text should looks in general
+@import "base/utilites"; //helpfool classes for some comoon actions
+//=============================
 
+//==============all pages have this================
 @import "layout/navigation";
 @import "layout/header";
 @import "layout/footer";
+//=============================
 
 
+//====================components for this page===================
 @import "components/imagesComposition";
 @import "components/bg-video";
 @import "components/buttons";
 @import "components/box-faetures";
 @import "components/cards";
-
 @import "components/book-form";
 @import "components/story";
 @import "components/popup";
+//====================components for this page===================
 
 
-
+//=============pages====================
 @import "pages/home";
+//=================================
